@@ -1,8 +1,7 @@
-from rest_framework import viewsets, permissions
-from rest_framework.exceptions import NotFound
+from rest_framework import permissions, viewsets
 from django.shortcuts import get_object_or_404
 
-from posts.models import Post, Group, Comment
+from posts.models import Group, Post
 from .serializers import PostSerializer, GroupSerializer, CommentSerializer
 from .permissions import IsAuthorOrReadOnly
 
